@@ -1,12 +1,17 @@
 """Public schemas exchanged between CLI, agents, and evaluators."""
 
-from enum import StrEnum
+from enum import Enum
 from typing import Any
 
 from pydantic import BaseModel, Field
 
 
-class AgentName(StrEnum):
+class AgentName(str, Enum):
+    """Agent name enumeration.
+
+    Uses str + Enum pattern for Python 3.10 compatibility (StrEnum is 3.11+).
+    """
+
     SUPERVISOR = "supervisor"
     RESEARCHER = "researcher"
     ANALYST = "analyst"

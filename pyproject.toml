@@ -7,7 +7,7 @@ name = "multi-agent-research-lab"
 version = "0.1.0"
 description = "Production-grade starter skeleton for a multi-agent research lab"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 authors = [{ name = "VinUniversity AI Lab" }]
 dependencies = [
   "pydantic>=2.7",
@@ -16,7 +16,9 @@ dependencies = [
   "rich>=13.7",
   "python-dotenv>=1.0",
   "PyYAML>=6.0",
-  "tenacity>=8.3"
+  "tenacity>=8.3",
+  "httpx>=0.27",
+  "duckduckgo-search>=5.0"
 ]
 
 [project.optional-dependencies]
